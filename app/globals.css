@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #f7f7fb;
+  overflow: hidden;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+#root,
+html,
+body {
+  width: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top left, rgba(156, 107, 255, 0.24), transparent 24%), radial-gradient(circle at bottom right, rgba(86, 210, 255, 0.18), transparent 18%), linear-gradient(180deg, #080812 0%, #07080f 35%, #0b0b17 100%);
+  animation: subtleShift 18s ease infinite;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+@keyframes subtleShift {
+  0% {
+    background-position: 0% 0%, 100% 100%, 0% 0%;
+  }
+  50% {
+    background-position: 100% 80%, 0% 20%, 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%, 100% 100%, 0% 0%;
+  }
+}
